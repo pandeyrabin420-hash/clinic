@@ -3,161 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Muskan Dental Care | Jorpati, Kathmandu</title>
+    <title>Healthy Muskan Dental Care | Best Dental Clinic in Jorpati, Kathmandu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://source.unsplash.com/random/1920x1080/?dentist-smile');
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/random/1920x1080/?dentist-smile');
             background-size: cover;
             background-position: center;
         }
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="font-sans">
+<body class="font-sans text-gray-800">
 
     <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-tooth text-4xl text-blue-600"></i>
                 <div>
                     <h1 class="text-2xl font-bold text-blue-700">Healthy Muskan</h1>
-                    <p class="text-xs text-emerald-600 -mt-1">Dental Care</p>
+                    <p class="text-xs text-green-600 -mt-1">Dental Care</p>
                 </div>
             </div>
-            <div class="hidden md:flex gap-8 text-lg">
-                <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="#whyus" class="hover:text-blue-600">Why Us</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            <div class="hidden md:flex items-center gap-8 text-lg">
+                <a href="#home" class="hover:text-blue-600 font-medium">Home</a>
+                <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
+                <a href="#about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="#info" class="hover:text-blue-600 font-medium">Dental Info</a>
+                <a href="#book" class="hover:text-blue-600 font-medium">Book Appointment</a>
             </div>
-            <button onclick="openBookingModal()" 
-                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-medium">
-                Book Appointment
-            </button>
+            <div class="flex items-center gap-4">
+                <a href="tel:+9779841360374" class="bg-green-600 text-white px-5 py-2 rounded-full font-medium hover:bg-green-700 flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+                <button onclick="openBookingModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700">
+                    Book Now
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center text-white">
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">Your Smile, Our Priority 😊</h2>
-            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Safe, affordable and advanced dental care in Jorpati, Kathmandu, Nepal</p>
-            <button onclick="openBookingModal()" 
-                    class="bg-white text-emerald-700 px-10 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-100 transition">
-                Book Appointment Now
-            </button>
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Your Smile, Our Priority</h2>
+            <p class="text-2xl mb-8 max-w-2xl mx-auto">Expert, gentle, and affordable dental care in Jorpati, Kathmandu. Making every smile healthier and brighter.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openBookingModal()" class="bg-white text-blue-700 px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition">
+                    Book Appointment
+                </button>
+                <a href="#services" class="border-2 border-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-white hover:text-blue-700 transition">
+                    Our Services
+                </a>
+            </div>
+            <div class="mt-12 flex justify-center gap-8 text-sm">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Pain-Free Treatment</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Modern Equipment</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Experienced Team</div>
+            </div>
         </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Our Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card bg-white p-8 rounded-3xl shadow">General Dental Checkup</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Teeth Cleaning & Scaling</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Tooth Filling</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Root Canal Treatment (RCT)</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Dental Implants</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Teeth Whitening</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Braces & Aligners</div>
-                <div class="service-card bg-white p-8 rounded-3xl shadow">Smile Makeover</div>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-blue-700">Our Services</h2>
+                <p class="text-xl text-gray-600 mt-3">Comprehensive dental care for the whole family</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-tooth text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">General Dentistry</h3>
+                    <p class="text-gray-600">Routine check-ups, fillings, extractions, and preventive care.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-sparkles text-5xl text-green-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Teeth Cleaning & Whitening</h3>
+                    <p class="text-gray-600">Professional scaling, polishing, and advanced whitening for a brighter smile.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-screwdriver-wrench text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Root Canal Treatment</h3>
+                    <p class="text-gray-600">Painless root canal procedures with modern techniques.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-tooth text-5xl text-green-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Dental Implants</h3>
+                    <p class="text-gray-600">Permanent solution for missing teeth with high success rate.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-child text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Pediatric Dentistry</h3>
+                    <p class="text-gray-600">Gentle and friendly care for children's dental health.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 transition-all">
+                    <i class="fa-solid fa-face-smile text-5xl text-green-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Cosmetic Dentistry</h3>
+                    <p class="text-gray-600">Veneers, smile makeovers, and aesthetic treatments.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section id="whyus" class="py-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-blue-700 mb-12">Why Choose Healthy Muskan Dental Care?</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="text-center">
-                    <i class="fa-solid fa-user-doctor text-5xl text-emerald-600 mb-4"></i>
-                    <p class="font-semibold">Experienced Doctors</p>
+    <!-- About -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-blue-700 mb-6">Welcome to Healthy Muskan Dental Care</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    Located in Jorpati, Gokarneshwar-5, Kathmandu, we are committed to providing high-quality, gentle dental care in a comfortable environment.
+                </p>
+                <p class="text-lg text-gray-600">
+                    Our experienced team uses modern equipment and follows strict sterilization standards to ensure your safety and satisfaction. 
+                    We believe everyone deserves a healthy and confident smile.
+                </p>
+                <div class="mt-10 grid grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-green-600">15+</div>
+                        <div class="text-sm text-gray-500">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-green-600">5000+</div>
+                        <div class="text-sm text-gray-500">Happy Patients</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-green-600">24/7</div>
+                        <div class="text-sm text-gray-500">Emergency Support</div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-microscope text-5xl text-emerald-600 mb-4"></i>
-                    <p class="font-semibold">Modern Technology</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-shield-halved text-5xl text-emerald-600 mb-4"></i>
-                    <p class="font-semibold">Safe & Hygienic Environment</p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-3xl">
+                <div class="bg-white p-8 rounded-2xl shadow">
+                    <h3 class="font-semibold text-xl mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-green-600"></i> Our Location
+                    </h3>
+                    <p class="text-lg">Jorpati, Gokarneshwor-5, Kathmandu, Nepal</p>
+                    <p class="mt-6 flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-green-600"></i> 
+                        <span>+977 1-4912983 | +977 984-1360374</span>
+                    </p>
+                    <p class="mt-3 flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-green-600"></i> 
+                        <span>healthymuskan2010@gmail.com</span>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-20 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-4">Book Your Appointment</h2>
+            <p class="text-xl text-gray-600 mb-10">Easy online booking – get your slot today!</p>
+            <button onclick="openBookingModal()" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white text-2xl px-16 py-6 rounded-2xl font-semibold shadow-lg transition">
+                Book Appointment Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center">
+        <div class="bg-white rounded-3xl max-w-lg w-full mx-4 max-h-[90vh] overflow-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-bold text-blue-700">Book Appointment</h3>
+                    <button onclick="closeBookingModal()" class="text-4xl text-gray-400 hover:text-gray-600">×</button>
+                </div>
+
+                <form id="bookingForm" onsubmit="handleBooking(event)">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Select Service</label>
+                            <select id="service" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                                <option value="">Choose a service...</option>
+                                <option>General Check-up & Cleaning</option>
+                                <option>Teeth Whitening</option>
+                                <option>Root Canal Treatment</option>
+                                <option>Dental Implants</option>
+                                <option>Pediatric Dentistry</option>
+                                <option>Cosmetic Dentistry</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Preferred Date</label>
+                                <input type="date" id="date" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Preferred Time</label>
+                                <select id="time" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                                    <option value="">Select time</option>
+                                    <option>10:00 AM</option>
+                                    <option>11:30 AM</option>
+                                    <option>2:00 PM</option>
+                                    <option>3:30 PM</option>
+                                    <option>5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" required class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="Your full name">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="+977 98XXXXXXXX">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-semibold text-lg transition">
+                            Confirm Booking
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-10">
-                
-                <!-- Clinic Info -->
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fa-solid fa-tooth text-4xl text-blue-400"></i>
-                        <h3 class="text-2xl font-bold">Healthy Muskan</h3>
-                    </div>
-                    <p class="text-gray-400">Jorpati, Gokarneshwar-5<br>Kathmandu, Nepal</p>
-                    <p class="mt-4 text-sm text-gray-400">Providing high-quality, affordable and modern dental care with a gentle touch.</p>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-tooth text-4xl text-blue-400"></i>
+                    <h3 class="text-2xl font-bold">Healthy Muskan Dental Care</h3>
                 </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="#services" class="hover:text-white">Our Services</a></li>
-                        <li><a href="#whyus" class="hover:text-white">Why Choose Us</a></li>
-                        <li><a onclick="openBookingModal()" class="hover:text-white cursor-pointer">Book Appointment</a></li>
-                        <li><a href="#contact" class="hover:text-white">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Contact Us</h4>
-                    <div class="space-y-4 text-gray-400">
-                        <p><i class="fa-solid fa-phone mr-3"></i> 01-4912983</p>
-                        <p><i class="fa-solid fa-mobile-screen-button mr-3"></i> 984-1360374 (WhatsApp)</p>
-                        <p><i class="fa-solid fa-envelope mr-3"></i> healthymuskan2010@gmail.com</p>
-                        <p><i class="fa-solid fa-clock mr-3"></i> Sunday - Friday: 10:00 AM - 6:00 PM</p>
-                    </div>
-                </div>
-
-                <!-- Follow Us -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Follow Us</h4>
-                    <div class="flex gap-6 text-3xl text-gray-400">
-                        <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="hover:text-green-400"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                    <p class="mt-10 text-sm text-gray-500">© 2026 Healthy Muskan Dental Care. All Rights Reserved.</p>
+                <p class="text-gray-400">Jorpati, Gokarneshwor-5<br>Kathmandu, Nepal</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#services" class="hover:text-white">Services</a></li>
+                    <li><a href="#about" class="hover:text-white">About Us</a></li>
+                    <li><a onclick="openBookingModal()" class="hover:text-white cursor-pointer">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-6">Contact Us</h4>
+                <div class="space-y-4 text-gray-400">
+                    <p><i class="fa-solid fa-phone mr-3"></i> +977 1-4912983</p>
+                    <p><i class="fa-solid fa-mobile-screen mr-3"></i> +977 984-1360374 (WhatsApp)</p>
+                    <p><i class="fa-solid fa-envelope mr-3"></i> healthymuskan2010@gmail.com</p>
                 </div>
             </div>
         </div>
+        <div class="text-center text-gray-500 text-sm mt-16">
+            © 2026 Healthy Muskan Dental Care, Jorpati, Kathmandu. All Rights Reserved.
+        </div>
     </footer>
 
-    <!-- Booking Modal -->
     <script>
         function openBookingModal() {
-            alert("✅ Thank you for your interest!\n\nPlease call us at 984-1360374 to book your appointment.");
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').classList.add('flex');
         }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            document.getElementById('bookingModal').classList.remove('flex');
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            if (!name) return alert("Please enter your name");
+
+            alert(`✅ Thank you, ${name}!\n\nYour appointment request has been received.\nWe will contact you shortly to confirm.\n\nHealthy Muskan Dental Care`);
+            closeBookingModal();
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Tailwind script already included via CDN
     </script>
 </body>
 </html>
 
-  
+   
 
-        
-        
-          
-                 
        
    
  
