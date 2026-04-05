@@ -161,31 +161,16 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="book" class="py-20 bg-blue-50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-blue-700 mb-4">Book Your Appointment</h2>
-            <p class="text-xl text-gray-600 mb-10">Easy online booking – get your slot today!</p>
-            <button onclick="openBookingModal()" 
-                    class="bg-blue-600 hover:bg-blue-700 text-white text-2xl px-16 py-6 rounded-2xl font-semibold shadow-lg transition">
-                Book Appointment Now
-            </button>
-        </div>
-    </section>
+                   <!-- Updated Form - Sends directly to your email -->
+                <form id="bookingForm"
+                      action="https://formsubmit.co/healthymuskan2010@gmail.com"
+                      method="POST"
+                      onsubmit="handleBooking(event)">
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center">
-        <div class="bg-white rounded-3xl max-w-lg w-full mx-4 max-h-[90vh] overflow-auto">
-            <div class="p-8">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-blue-700">Book Appointment</h3>
-                    <button onclick="closeBookingModal()" class="text-4xl text-gray-400 hover:text-gray-600">×</button>
-                </div>
-
-                <form id="bookingForm" onsubmit="handleBooking(event)">
                     <div class="space-y-6">
                         <div>
                             <label class="block text-sm font-medium mb-2">Select Service</label>
-                            <select id="service" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                            <select id="service" name="Service" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
                                 <option value="">Choose a service...</option>
                                 <option>General Check-up & Cleaning</option>
                                 <option>Teeth Whitening</option>
@@ -199,11 +184,11 @@
                         <div class="grid grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium mb-2">Preferred Date</label>
-                                <input type="date" id="date" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                                <input type="date" id="date" name="Preferred_Date" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Preferred Time</label>
-                                <select id="time" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
+                                <select id="time" name="Preferred_Time" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500">
                                     <option value="">Select time</option>
                                     <option>10:00 AM</option>
                                     <option>11:30 AM</option>
@@ -216,30 +201,37 @@
 
                         <div>
                             <label class="block text-sm font-medium mb-2">Full Name</label>
-                            <input type="text" id="name" required class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="Your full name">
+                            <input type="text" id="name" name="Full_Name" required 
+                                   class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" 
+                                   placeholder="Your full name">
                         </div>
 
                         <div class="grid grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium mb-2">Phone Number</label>
-                                <input type="tel" id="phone" required class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="+977 98XXXXXXXX">
+                                <input type="tel" id="phone" name="Phone_Number" required 
+                                       class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" 
+                                       placeholder="+977 98XXXXXXXX">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" placeholder="your@email.com">
+                                <input type="email" id="email" name="Email" 
+                                       class="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:border-blue-500" 
+                                       placeholder="your@email.com">
                             </div>
                         </div>
 
-                        <button type="submit" 
+                        <!-- Hidden fields for clean email -->
+                        <input type="hidden" name="_subject" value="New Appointment Booking from Healthy Muskan Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+
+                        <button type="submit"
                                 class="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-semibold text-lg transition">
                             Confirm Booking
                         </button>
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
